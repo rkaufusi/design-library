@@ -1,4 +1,5 @@
 import React from 'react'
+import Main from './Main'
 
 type boolVal = {
     isOpen: boolean
@@ -7,9 +8,12 @@ type boolVal = {
 const SideNav = ({isOpen}: boolVal) => {
 
     return (
+        <>
         <div className={!isOpen ? `md:h-screen md:w-fit md:bg-slate-700` : `h-screen w-fit bg-slate-700`}>
             <div className={!isOpen ? 'hidden md:block' : 'text-xl'}>SideNav</div>
         </div>
+        
+        </>
     )
 }
 

@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import {AiFillGithub} from 'react-icons/ai'
 import {GiHamburgerMenu} from 'react-icons/gi'
+import Main from './Main'
 import SideNav from './SideNav'
 
 
@@ -14,7 +15,10 @@ const TopNav = () => {
                 <h1 className="ml-4 text-3xl text-white">My Design Library</h1>
                 <AiFillGithub className="text-white h-20 w-10 mr-2"/>    
             </div>
-            <SideNav isOpen={open}/>
+            <div className='flex flex-row'>
+                <SideNav isOpen={open}/>
+                <Main isOpen={open}/>
+            </div>
         </>
     )
 }
