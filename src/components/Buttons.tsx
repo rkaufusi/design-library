@@ -29,7 +29,7 @@ const Buttons = ({isOpen}: boolVal) => {
                 <ul className={click ?  "text-white mx-2" : "hidden"}>
                     <li onClick={() => handleSelection()} className="hover:bg-slate-700 hover:cursor-pointer hover:rounded-md px-4">button one</li>
                     <li onClick={() => handleSelection()} className="hover:bg-slate-700 hover:cursor-pointer hover:rounded-md px-4">button two</li>
-                    <li onClick={() => handleSelection()} className="hover:bg-slate-700 hover:cursor-pointer hover:rounded-md px-4">button 5555</li>
+                    <li onClick={() => handleSelection()} className="hover:bg-slate-700 hover:cursor-pointer hover:rounded-md px-4">button three</li>
                 </ul>
             </div>
         </div>

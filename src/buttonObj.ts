@@ -1,3 +1,5 @@
+import Main from './components/Main'
+
 const buttons = {
     buttonOne: {
         title: "Basic Button",

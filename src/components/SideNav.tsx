@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Main from './Main'
 import {RiArrowDropDownLine} from 'react-icons/ri'
 import Buttons from './Buttons'
+import ButtonTwo from './ButtonTwo'
 
 type boolVal = {
     isOpen: boolean
@@ -20,7 +21,7 @@ const SideNav = ({isOpen}: boolVal) => {
                 <div className={!isOpen ? 'hidden md:block text-white text-2xl px-4' : 'text-2xl text-white px-4'}>Design Elements</div>
                 <Buttons isOpen={isOpen} />
             </div>
-            <Main isOpen={isOpen} />
+            <Main isOpen={isOpen} component={<ButtonTwo/>}/>
         </div>
     )
 }
