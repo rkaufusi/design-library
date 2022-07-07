@@ -1,27 +1,19 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import Main from './Main'
 import {RiArrowDropDownLine} from 'react-icons/ri'
 import Buttons from './Buttons'
-import ButtonTwo from './ButtonTwo'
+//import { ComponentContext } from '../App'
 
 type boolVal = {
     isOpen: boolean
 }
 
 const SideNav = ({isOpen}: boolVal) => {
+    //const context = useContext(ComponentContext)
     const [click, setClick] = useState(false)
     const [selected, setSelected] = useState("Main")
     const handleClick = () => {
         setClick(!click)
-    }
-
-    const buttonObj = {
-        buttonOne: {
-            component: <ButtonTwo/>
-        },
-        buttonTwo: {
-            component: <ButtonTwo/>
-        }
     }
 
     return (
@@ -30,7 +22,7 @@ const SideNav = ({isOpen}: boolVal) => {
                 <div className={!isOpen ? 'hidden md:block text-white text-2xl px-4' : 'text-2xl text-white px-4'}>Design Elements</div>
                 <Buttons isOpen={isOpen} />
             </div>
-            <Main isOpen={isOpen} component={buttonObj.buttonTwo.component}/>
+            <Main isOpen={isOpen}/>
         </div>
     )
 }

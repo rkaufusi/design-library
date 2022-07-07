@@ -1,7 +1,6 @@
 import React from 'react'
-import ButtonTwo from './components/ButtonTwo'
 
-export const componentObj = () => {
+export const ComponentObj = () => {
     // button one
     return (
         <div className="flex flex-col w-auto h-auto justify-evenly items-center">
