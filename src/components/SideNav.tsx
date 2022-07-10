@@ -9,7 +9,8 @@ type boolVal = {
 }
 
 const SideNav = ({isOpen}: boolVal) => {
-    //const context = useContext(ComponentContext)
+    //const [context, setContext] = useContext(ComponentContext) as any
+
     const [click, setClick] = useState(false)
     const [selected, setSelected] = useState("Main")
     const handleClick = () => {

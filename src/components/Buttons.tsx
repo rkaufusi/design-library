@@ -1,5 +1,9 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 import {RiArrowDropDownLine} from 'react-icons/ri'
+import { ComponentContext } from '../App'
+import {ButtonTwo2, ComponentObj} from '../componentObj'
+
+
 
 
 type boolVal = {
@@ -11,8 +15,11 @@ const Buttons = ({isOpen}: boolVal) => {
     const handleClick = () => {
         setClick(!click)
     }
-    const handleSelection = () => {
-        //
+
+    const [context, setContext] = useContext(ComponentContext);
+
+    const handleSelection = (name: any) => {
+        setContext(name)
     }
     return (
         <div>
@@ -27,9 +34,9 @@ const Buttons = ({isOpen}: boolVal) => {
             </div>
             <div className={isOpen ? "" : "hidden md:block"}>
                 <ul className={click ?  "text-white mx-2" : "hidden"}>
-                    <li onClick={() => handleSelection()} className="hover:bg-slate-700 hover:cursor-pointer hover:rounded-md px-4">button one</li>
-                    <li onClick={() => handleSelection()} className="hover:bg-slate-700 hover:cursor-pointer hover:rounded-md px-4">button two</li>
-                    <li onClick={() => handleSelection()} className="hover:bg-slate-700 hover:cursor-pointer hover:rounded-md px-4">button three</li>
+                    <li onClick={() => handleSelection(ComponentObj)} className="hover:bg-slate-700 hover:cursor-pointer hover:rounded-md px-4">button one</li>
+                    <li onClick={() => handleSelection(ButtonTwo2)} className="hover:bg-slate-700 hover:cursor-pointer hover:rounded-md px-4">button two</li>
+                    <li onClick={() => handleSelection('buttonThree')} className="hover:bg-slate-700 hover:cursor-pointer hover:rounded-md px-4">button three</li>
                 </ul>
             </div>
         </div>

@@ -12,9 +12,9 @@ export const ComponentContext = createContext(ComponentObj) as any
     </ComponentContext.Provider> */
 
 function App() {
-  const [component, setComponent] = useState(ComponentObj)
+  const [context, setContext] = useState(ComponentObj)
   return (
-    <ComponentContext.Provider value={component}>
+    <ComponentContext.Provider value={[context, setContext]}>
       <TopNav/>
     </ComponentContext.Provider>
   );

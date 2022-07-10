@@ -8,7 +8,7 @@ type boolVal = {
 
 const Main = ({isOpen}: boolVal) => {
 
-    const context = useContext(ComponentContext) as any
+    const [context, setContext] = useContext(ComponentContext) as any
     console.log(context)
 
     return (
